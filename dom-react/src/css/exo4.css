@@ -1,0 +1,11 @@
+.carreBleu {
+    width: 350px;
+    height: 350px;
+    background-color: rgb(18, 18, 133);
+}
+
+.carreRose {
+    width: 175px;
+    height: 175px;
+    background-color: rgb(180, 49, 152);
+}

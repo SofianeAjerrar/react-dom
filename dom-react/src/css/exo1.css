@@ -1,0 +1,27 @@
+div {
+    font-size: smaller;
+}
+
+.listDesign {
+    counter-reset: li;
+    list-style: none;
+    font-size: 15px;
+    padding: 0;
+}
+
+.listDesign li {
+    position: relative;
+    padding: .4em .4em .4em 2em;
+    margin: .5em 0;
+    background: rgb(88, 25, 21);
+    color: rgb(223, 159, 159);
+    text-decoration: none;
+    transition: all .2s ease-in-out;
+}
+
+.listDesign li:hover {
+    background: rgb(204, 184, 6);
+    color: black;
+    text-decoration: none;
+    transform: scale(1.1);
+}
