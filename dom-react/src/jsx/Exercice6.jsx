@@ -40,7 +40,7 @@ let Exercice6 = () => {
         let response2 = document.getElementById('response2');
         inputCalculator2.placeholder = '0';
         inputCalculator2.value = '';
-        response2.innerHTML = 'Afficheur';
+        response2.innerHTML = 'Réponse';
     }
 
     let equalizer = () => {
@@ -48,9 +48,6 @@ let Exercice6 = () => {
         let response2 = document.getElementById('response2');
         response2.innerHTML = eval(inputCalculator2.value);
         inputCalculator2.value = '';
-        if (inputCalculator2.value != '') {
-            inputCalculator2(eval(inputCalculator2.value));
-        }
     }
 
 
