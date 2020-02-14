@@ -4,13 +4,17 @@ import '../public/exo3.css';
 
 let Exercice3 = () => {
 
-    let changeContentOfSpan = (e) => {
+    let changeContentOfSpan = () => {
         let spanExo3 = document.getElementById('spanExo3');
         let inputExo3 = document.getElementById('inputExo3');
-        spanExo3.innerHTML = inputExo3.value;
-        inputExo3.innerHTML = '';
+        if (inputExo3.value != '') {
+            spanExo3.innerHTML = inputExo3.value;
+            inputExo3.innerHTML = '';
+            inputExo3.style.borderColor = 'none'
+        } else {
+            inputExo3.style.borderColor = 'red'
+        }
     }
-
 
     return (
         <div className='bg-secondary px-5 py-3 rounded text-justify container divExo3'>
@@ -20,7 +24,7 @@ let Exercice3 = () => {
             <p>Interdiction de toucher à l'HTML</p>
             <p className='text-danger'>Bonus: Lorsque vous appuyez sur "enter" après avoir écrit le nom, le changement de nom s'effectue également.</p>
             <div className='text-center'>
-                <input id='inputExo3' type="text" />
+                <input id='inputExo3' placeholder='Veuillez entrez un nom' type="text" />
                 <button id='buttonExo3' onClick={() => changeContentOfSpan()}>Go</button>
             </div>
         </div>
