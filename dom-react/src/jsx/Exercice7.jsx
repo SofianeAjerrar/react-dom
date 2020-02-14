@@ -6,37 +6,40 @@ let Exercice7 = () => {
 
     let addAChild = () => {
         //Checkbox
-        let inputCheckbox = document.createElement('input');
         let inputExo7 = document.getElementById('inputExo7');
-        inputCheckbox.type = 'checkbox';
+        if (inputExo7.value != '') {
+            let inputCheckbox = document.createElement('input');
+            inputCheckbox.type = 'checkbox';
 
-        // InputExo 7
-        let toDoPupelos = document.getElementById('toDoPupelos');
-        let para = document.createElement('p');
-        para.innerHTML = inputExo7.value;
-        //Delete Button
-        let inputDelete = document.createElement('button');
-        inputDelete.innerHTML = 'Supprimer'
+            // InputExo 7
+            let toDoPupelos = document.getElementById('toDoPupelos');
+            let para = document.createElement('p');
+            para.innerHTML = inputExo7.value;
+            //Delete Button
+            let inputDelete = document.createElement('button');
+            inputDelete.innerHTML = 'Supprimer'
 
-        //Appendchild
-        para.appendChild(inputCheckbox);
-        toDoPupelos.appendChild(para);
-        para.appendChild(inputDelete);
-        inputExo7.value = '';
+            //Appendchild
+            para.appendChild(inputCheckbox);
+            toDoPupelos.appendChild(para);
+            para.appendChild(inputDelete);
+            inputExo7.value = '';
 
-        //apparition deleteButton
-        inputDelete.onclick = () => {
-            inputDelete.parentElement.remove()
-        }
+            //apparition deleteButton
+            inputDelete.onclick = () => {
+                inputDelete.parentElement.remove()
+            }
 
-        // checkbox vert ou pas
-        inputCheckbox.onclick = () => {
-            if (inputCheckbox.checked) {
-                para.style.backgroundColor = 'green';
-            } else {
-                para.style.backgroundColor = 'unset';
+            // checkbox vert ou pas
+            inputCheckbox.onclick = () => {
+                if (inputCheckbox.checked) {
+                    para.style.backgroundColor = 'green';
+                } else {
+                    para.style.backgroundColor = 'unset';
+                }
             }
         }
+
     }
 
     return (
@@ -51,9 +54,7 @@ let Exercice7 = () => {
                 aria-describedby="inputGroup-sizing-sm"
                 onKeyUp={(e) => {
                     if (e.keyCode === 13) {
-                        // if ( != '') {
-                            addAChild()
-                        // }
+                        addAChild()
                     }
                 }}
             />
