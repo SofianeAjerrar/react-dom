@@ -24,7 +24,12 @@ let Exercice3 = () => {
             <p>Interdiction de toucher à l'HTML</p>
             <p className='text-danger'>Bonus: Lorsque vous appuyez sur "enter" après avoir écrit le nom, le changement de nom s'effectue également.</p>
             <div className='text-center'>
-                <input id='inputExo3' placeholder='Veuillez entrez un nom' type="text" />
+                <input id='inputExo3' placeholder='Veuillez entrez un nom' type="text" onKeyPress={(e) => {
+                    if (e.keyCode === 'Enter') {
+                        changeContentOfSpan();
+                    }
+                }
+                } />
                 <button id='buttonExo3' onClick={() => changeContentOfSpan()}>Go</button>
             </div>
         </div>
