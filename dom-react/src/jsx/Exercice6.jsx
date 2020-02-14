@@ -30,12 +30,29 @@ let Exercice6 = () => {
 
     }
 
-    let calculatorLvl2 = (value, event) => {
+    let calculatorLvl2 = (value) => {
         let inputCalculator2 = document.getElementById('inputCalculator2');
-        if (event.keyCode === 13) {
-            inputCalculator2.value += value;
+        inputCalculator2.value += value;
+    }
+
+    let resetCalcul = () => {
+        let inputCalculator2 = document.getElementById('inputCalculator2');
+        let response2 = document.getElementById('response2');
+        inputCalculator2.placeholder = '0';
+        inputCalculator2.value = '';
+        response2.innerHTML = 'Afficheur';
+    }
+
+    let equalizer = () => {
+        let inputCalculator2 = document.getElementById('inputCalculator2');
+        let response2 = document.getElementById('response2');
+        response2.innerHTML = eval(inputCalculator2.value);
+        inputCalculator2.value = '';
+        if (inputCalculator2.value != '') {
+            inputCalculator2(eval(inputCalculator2.value));
         }
     }
+
 
     return (
         <>
@@ -62,7 +79,8 @@ let Exercice6 = () => {
             {/* CALCULETTE 2 */}
             <div>
                 <h3 className='mb-5'>Niveau 2</h3>
-                <input id='inputCalculator2' type="text" />
+                <span className='mr-5' id='response2'>Réponse</span>
+                <input id='inputCalculator2' type="text" placeholder='0'/>
                 <div className='justify-content-center'>
                     <div className='divExo6'>
                         <button className='buttonCalculator mr-0' onClick={() => calculatorLvl2(7)}>7</button>
@@ -84,8 +102,8 @@ let Exercice6 = () => {
                     </div>
                     <div className='divExo6'>
                         <button className='buttonCalculator mr-0' onClick={() => calculatorLvl2(0)}>0</button>
-                        <button className='buttonCalculator mr-0' onClick={() => calculatorLvl2('c')}>C</button>
-                        <button className='buttonCalculator mr-0' onClick={() => calculatorLvl2('=')}>=</button>
+                        <button className='buttonCalculator mr-0' onClick={() => resetCalcul()}>C</button>
+                        <button className='buttonCalculator mr-0' onClick={() => equalizer()}>=</button>
                         <button className='buttonCalculator mr-0' onClick={() => calculatorLvl2('+')}>+</button>
                     </div>
                 </div>
