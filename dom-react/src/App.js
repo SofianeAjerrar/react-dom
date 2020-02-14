@@ -14,6 +14,7 @@ import Exercice2 from './jsx/Exercice2';
 import Exercice3 from './jsx/Exercice3';
 import Exercice4 from './jsx/Exercice4';
 import Exercice5 from './jsx/Exercice5';
+import Exercice6 from './jsx/Exercice6';
 
 function App() {
   return (
@@ -64,7 +65,9 @@ function App() {
             <Route path="/Exercice5">
               <Exercice5 />
             </Route>
-            <Route path="/Exercice6"></Route>
+            <Route path="/Exercice6">
+              <Exercice6 />
+            </Route>
             <Route path="/Exercice7"></Route>
             <Route path='/'>
               <Accueil />

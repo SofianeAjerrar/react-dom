@@ -24,8 +24,8 @@ let Exercice5 = () => {
         let ajoutOeuf = document.getElementById('ajoutOeuf');
         if (ajoutOeuf.lastChild) {
             ajoutOeuf.removeChild(ajoutOeuf.lastChild);
-            setCount(count + 1);
         }
+        setCount(count + 1);
     }
 
     let deleteAllEgg = () => {

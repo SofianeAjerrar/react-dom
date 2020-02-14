@@ -1,6 +1,6 @@
 import React from 'react';
 import '../../node_modules/bootstrap/dist/css/bootstrap.css';
-import '../public/Accueil.css';
+import '../css/Accueil.css';
 
 let Accueil = () => {
     return (

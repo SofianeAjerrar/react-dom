@@ -1,6 +1,6 @@
 import React from 'react';
 import '../../node_modules/bootstrap/dist/css/bootstrap.css';
-import '../public/exo2.css';
+import '../css/exo2.css';
 
 let Exercice2 = () => {
     return(
